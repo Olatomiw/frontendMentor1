@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <style>
+        @font-face {
+            font-family: inter;
+            src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+        }
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            font-family: inter;
+            
+        }
+        nav{
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            width: 100%;
+            border: 2px solid black;
+        }
+        .logo-cont, menu{
+            margin-top: 10px;
+            width: 50%;
+            border: 2px solid red;
+            display: flex;
+            align-items: end;
+        }
+        menu{
+            justify-content: end;
+        }
+        ul{
+            list-style-type: none;
+            font-size: 15px;
+            display: flex;
+            width: 70%;
+            border: 2px solid yellow;
+            justify-content: space-between;
+            text-transform: capitalize;
+        }
+        ul li:hover{
+            color: hsl(5, 85%, 63%);
+        }
+        span img{
+            display: none;
+        }
+        @media screen and (max-width:375px) {
+            .logo-cont{
+                align-items: start;
+            }
+            menu{
+                height: 70vh;
+                justify-content: start;
+                /* align-items: start; */
+                background-color:white ;
+                flex-direction: column;
+            }
+            ul{
+                height: 50%;
+                justify-content: space-between;
+                margin-top: 30px;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+            }
+            ul li{
+                font-weight: bold;
+                font-size: 20px;
+                /* padding-bottom: 10px; */
+                padding-left: 10px;
+            }
+            span img{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <div class="logo-cont">
+                <img src="./assets/images/logo.svg" alt="">
+            </div>
+            <menu>
+                <span id="menu-icon" onclick="myFunction()"><img src="./assets/images/icon-menu.svg" alt="" id="myImage"></span>
+                <ul>
+                    <li>Home</li>
+                    <li>New</li>
+                    <li>Popular</li>
+                    <li>trending</li>
+                    <li>categories</li>
+                </ul>
+            </menu>
+        </nav>
+    </div>
+    <script src="./javaScript/script.js"></script>
+</body>
+
+</html>
